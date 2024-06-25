@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Library Management</title>
+<style>
+
+body
+{
+background-color:#ffb3bf;
+background-image:url("F:/html/s.jpg");
+background-repeat:repeat-x;
+background-position:top;
+background-attachment:fixed;
+
+}
+h2
+{
+color:#009999;
+font-size:300%;
+margin-top:150px;
+font-family:verdana;
+}
+td
+{color:#009999;
+font-family:verdana;
+font-size:160%;
+
+}
+input[type=text],input[type=password]
+{
+font-size:100%;
+margin-left:60px;
+margin:30px;
+}
+input[type=submit]
+{
+height:50px;
+width:80px;
+margin:60px;
+}
+</style>
+
+</head>
+<body>
+<form  name="form1" align= "center" onsubmit="return confirmation()" action="login.jsp" method="post" >
+<br>
+<h2>
+<label >ADMIN LOGIN</label>
+</h2>
+<table align ="center" width="400" height="200" >
+<tr>
+<td>User Name</td>
+<td><input type="text" name="username"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="pass"></td>
+</tr>
+
+<tr>
+<td></td>
+<td><input type="Submit" value="LOGIN"  width="400px" height="200px" ></td>
+</tr>
+</table>
+<a href= " registration.html" > Not registered?Sign Up </a>
+</form>
+
+</body>
+</html>

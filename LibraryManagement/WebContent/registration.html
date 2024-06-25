@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+<style>
+h2
+{
+color:#660029;
+font-size:300%;
+font-family:verdana;
+margin-left:120px;
+margin-top:90px;
+}
+td
+{
+color:#660029;
+font-size:220%;
+font-family:verdana;
+}
+body
+{
+background-color:#99ff99;
+background-image:url("k.jpg");
+background-repeat:repeat-x;
+background-position:top;
+background-attachment:fixed;
+
+}
+input[type=text],input[type=password],input[type=submit],input[type=radio]
+{
+margin-left:30px;
+height:35px;
+
+
+}
+
+
+form
+{
+align:"right";
+}
+
+</style>
+<script>
+function validate()
+{
+var email1= document.myform.mail.value;
+var at = email1.indexOf('@');
+var dot = email1.indexOf('.');
+var phone = document.myform.contact.value;
+if(document.myform.name.value!='')
+{
+if(document.myform.pass.value==document.myform.pass1.value)
+{
+if(at<dot&&email1.length>=dot+2)
+{
+if(document.myform.m1.value!=''||document.myform.f1.value!='')
+{
+if(phone.length=10)
+{
+alert("Registration is Completed");
+}
+else
+{
+alert("Invalid Phone");
+}
+}
+else
+{
+alert("Gender can not be NULL");
+}
+}
+else
+{
+alert("Invalid Email");
+}
+}
+else
+{
+alert("Password Donot Match");
+}
+}
+else
+{
+alert("Name can not be NULL");
+}
+}
+</script>
+</head>
+<body>
+<form name="myform" onsubmit="return validate()" action="registration.jsp" method="post" >
+<div class="registration">
+<center>
+<table>
+<th><h2>Registration Form</h2></th>
+<tr>
+<td><label>Name</label></td>
+<td><input type="text" name="name" placeholder="Your Name"></td>
+</tr>
+<br>
+<tr>
+<td><label>Password</label></td>
+<td><input type="password" name="pass" placeholder="password"></td>
+</tr>
+<br>
+<tr>
+<td><label>Confirm Password</label></td>
+<td><input type="password" name="pass1" placeholder="confirm password"></td>
+</tr>
+<br>
+<tr>
+<td><label>E-mail address</label></td>
+<td><input type="text" name="mail" placeholder="mail"></td>
+</tr>
+<br>
+<tr>
+<td><label> Gender </label></td>
+<td><input type="radio" value="Male" name ="m1">Male
+<input type="radio" value ="Female" name = "m1">Female</td>
+</tr>
+<br>
+<tr>
+<td><label> Contact </label></td>
+<td><input type="text" name = "contact" placeholder="phonenumber"></td>
+</tr>
+<br>
+<tr>
+<td></td>
+<td><input type = "submit" value = "Sign Up" name = "s1" ></td>
+</tr>
+</table>
+</center>
+</form>
+</div>
+</body>
+</html>
